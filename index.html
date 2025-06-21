@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Email for Dad</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 20px auto;
+            background: linear-gradient(135deg, #4a90e2 0%, #5eaa25 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .email-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .email-header {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .email-field {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .email-field strong {
+            color: #495057;
+            min-width: 60px;
+            display: inline-block;
+        }
+        
+        .subject-line {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 15px;
+            padding: 10px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            border-radius: 6px;
+            text-align: center;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); }
+            to { box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+        }
+        
+        .email-body {
+            padding: 30px;
+        }
+        
+        .greeting {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .birthday-message {
+            background: linear-gradient(45deg, #5dade2, #f8c471);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .birthday-message::before {
+            content: '🎉';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 24px;
+            animation: bounce 1s infinite;
+        }
+        
+        .birthday-message::after {
+            content: '🎂';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            animation: bounce 1s infinite 0.5s;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .birthday-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .message-content {
+            color: #495057;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+        
+        .signature {
+            padding-top: 20px;
+            color: #495057;
+        }
+        
+        .photo-placeholder {
+            margin: 25px -30px;
+        }
+        
+        .photo-frame {
+            width: 100%;
+            height: 250px;
+            border: none;
+            border-radius: 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(45deg, #85c1e9, #f4d03f);
+        }
+        
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .hearts {
+            color: #e74c3c;
+            font-size: 18px;
+            margin: 0 5px;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ff6b6b;
+            animation: confetti-fall 3s linear infinite;
+        }
+        
+        .confetti:nth-child(2) { left: 20%; animation-delay: 0.5s; background: #3498db; }
+        .confetti:nth-child(3) { left: 40%; animation-delay: 1s; background: #5eaa25; }
+        .confetti:nth-child(4) { left: 60%; animation-delay: 1.5s; background: #5dade2; }
+        .confetti:nth-child(5) { left: 80%; animation-delay: 2s; background: #5eaa25; }
+        
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    
+    <div class="email-container">
+        <div class="email-header">
+            <div class="email-field"><strong>From:</strong> Your Favorite Child 😉</div>
+            <div class="email-field"><strong>To:</strong> The World's Best Dad (aka drphil@mindstatepsychology.com.au)</div>
+            <div class="email-field"><strong>Date:</strong> Sunday, June 22, 2025</div>
+            <div class="email-field"><strong>Priority:</strong> Important❗</div>
+            
+            <div class="subject-line">
+                🎈 URGENT: Annual Dad Appreciation Day Has Arrived! 🎈
+            </div>
+        </div>
+        
+        <div class="email-body">
+            <div class="greeting">Dear Dad,</div>
+            
+            <div class="message-content">
+                I wanted to send you something special that would stand out among all your work emails. Consider this your most important message of the day!
+                <br><br>
+                
+                <div class="photo-placeholder">
+                    <div class="photo-frame">
+                        <img src="your-photo-here.jpg" alt="Photo of us together" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="photo-caption">Replace this with your favorite photo of you and dad!</div>
+                    </div>
+                </div>
+                
+                <br>
+                Thank you for being such an incredible dad. Your wisdom, humor, and love mean the world to me. I hope your birthday is filled with all your favorite things and that the year ahead brings you happiness and joy.
+                <br><br>
+                Looking forward to celebrating with you soon!
+            </div>
+            
+            <div class="signature">
+                With all my love and birthday wishes,
+                <br><br>
+                <strong>Jarom</strong> <span class="hearts">❤️</span>
+                <br><br>
+                <em>P.S. - No action items required for this email, just enjoy your special day!</em>
+            </div>
+        </div>
+        
+        <div class="footer">
+            This email contains 100% genuine birthday wishes and unlimited love
+        </div>
+    </div>
+</body>
+</html>
