@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Email for Dad</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -49,8 +50,8 @@
             font-size: 18px;
             font-weight: bold;
             color: #ffffff;
-            margin-top: 15px;
-            padding: 10px;
+            margin-top: 20px;
+            padding: 15px;
             background: linear-gradient(45deg, #FFD700, #FFA500);
             border-radius: 6px;
             text-align: center;
@@ -70,6 +71,23 @@
             font-size: 16px;
             margin-bottom: 20px;
             color: #2c3e50;
+        }
+
+        /* Smooth transitions for image slider */
+        .mySlides {
+            transition: opacity 0.5s ease-in-out !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .w3-content {
+            position: relative;
+            height: 400px; /* Set a fixed height for the container */
+        }
+
+        .image {
+            transition: opacity 0.3s ease-in-out;
         }
         
         .birthday-message {
@@ -174,10 +192,10 @@
             animation: confetti-fall 3s linear infinite;
         }
         
-        .confetti:nth-child(2) { left: 20%; animation-delay: 0.5s; background: #3498db; }
-        .confetti:nth-child(3) { left: 40%; animation-delay: 1s; background: #5eaa25; }
+        .confetti:nth-child(2) { left: 20%; animation-delay: 0.5s; background: #e316ba; }
+        .confetti:nth-child(3) { left: 40%; animation-delay: 1s; background: #e3df09; }
         .confetti:nth-child(4) { left: 60%; animation-delay: 1.5s; background: #5dade2; }
-        .confetti:nth-child(5) { left: 80%; animation-delay: 2s; background: #5eaa25; }
+        .confetti:nth-child(5) { left: 80%; animation-delay: 2s; background: #ee790b; }
         
         @keyframes confetti-fall {
             0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
@@ -195,12 +213,12 @@
     <div class="email-container">
         <div class="email-header">
             <div class="email-field"><strong>From:</strong> Your Favorite Child 😉</div>
-            <div class="email-field"><strong>To:</strong> The World's Best Dad (aka drphil@mindstatepsychology.com.au)</div>
+            <div class="email-field"><strong>To:</strong> The World's Best Dad (drphil@mindstatepsychology.com.au)</div>
             <div class="email-field"><strong>Date:</strong> Sunday, June 22, 2025</div>
             <div class="email-field"><strong>Priority:</strong> Important❗</div>
             
             <div class="subject-line">
-                🎈 URGENT: Annual Dad Appreciation Day Has Arrived! 🎈
+                🎈 URGENT: It's Dad's Birthday! 🎈
             </div>
         </div>
         
@@ -208,20 +226,31 @@
             <div class="greeting">Dear Dad,</div>
             
             <div class="message-content">
-                I wanted to send you something special that would stand out among all your work emails. Consider this your most important message of the day!
+                As the IT overloard, I know you get way too many emails every day, so I thought I'd send you one that's actually worth opening! (and hopefuly, re-opening ☺️)
                 <br><br>
                 
-                <div class="photo-placeholder">
-                    <div class="photo-frame">
-                        <img src="your-photo-here.jpg" alt="Photo of us together" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                        <div class="photo-caption">Replace this with your favorite photo of you and dad!</div>
+                <!-- Change this to be a slider? -->
+                <div class="w3-content">
+                    <img class="mySlides" src="public/dad1-compressed.jpg" style="width:100%;display:none">
+                    <img class="mySlides" src="public/dad2-compressed.jpg" style="width:100%">
+                    <img class="mySlides" src="public/dad3-compressed.jpg" style="width:100%;display:none">
+
+                    <div class="w3-row-padding w3-section">
+                        <div class="w3-col s4">
+                            <img class="image w3-opacity w3-hover-opacity-off" src="public/dad1-compressed.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+                        </div>
+                        <div class="w3-col s4">
+                            <img class="image w3-opacity w3-hover-opacity-off" src="public/dad2-compressed.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+                        </div>
+                        <div class="w3-col s4">
+                            <img class="image w3-opacity w3-hover-opacity-off" src="public/dad3-compressed.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+                        </div>
                     </div>
                 </div>
-                
                 <br>
-                Thank you for being such an incredible dad. Your wisdom, humor, and love mean the world to me. I hope your birthday is filled with all your favorite things and that the year ahead brings you happiness and joy.
-                <br><br>
-                Looking forward to celebrating with you soon!
+                All shenanigans aside, thank you for being such an incredible dad. Your wisdom, humour, and love mean the world to me. From approving all my crazy IT projects to teaching me the inner workings of businesses and finances, you’ve helped me gain a new appreciation for how the world works (it’s like when you used to help me take apart dead computers, except these ones are still working!)<br><br>
+                Your knowledge, years of life experience, and sometimes very out-of-pocket aphorisms make every conversation an educational and joyful memory that I cherish. Your hard work and many sacrifices don’t go unnoticed, and knowing that you're a shoulder I can lean on - no matter what – makes such a difference.<br><br>
+                I hope you have a happy birthday and that the year ahead brings you happiness and joy. I’m so grateful that I can have a dad like you.
             </div>
             
             <div class="signature">
@@ -229,13 +258,97 @@
                 <br><br>
                 <strong>Jarom</strong> <span class="hearts">❤️</span>
                 <br><br>
-                <em>P.S. - No action items required for this email, just enjoy your special day!</em>
             </div>
         </div>
         
         <div class="footer">
-            This email contains 100% genuine birthday wishes and unlimited love
+            This email contains 100% genuine birthday wishes and unlimited love. Powered by 🍦
         </div>
     </div>
+
+    <script>
+    var slideIndex = 1;
+    var autoSlideTimer;
+
+    // Initialize the slider
+    showDivs(slideIndex);
+    startAutoSlide();
+
+    function currentDiv(n) {
+        // Stop auto-rotation when user manually clicks
+        clearInterval(autoSlideTimer);
+        showDivs(slideIndex = n);
+        // Restart auto-rotation after 5 seconds of no interaction
+        setTimeout(startAutoSlide, 5000);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("image");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        
+        // Set up the new image behind the current one
+        x[slideIndex-1].style.display = "block";
+        x[slideIndex-1].style.opacity = "0";
+        x[slideIndex-1].style.zIndex = "1";
+        
+        // Find current visible image and set it above
+        for (i = 0; i < x.length; i++) {
+            if (i !== slideIndex-1 && x[i].style.display === "block") {
+                x[i].style.zIndex = "2";
+            }
+        }
+        
+        // Update thumbnail opacity
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        dots[slideIndex-1].className += " w3-opacity-off";
+        
+        // Cross-fade: fade in new image while old one stays visible
+        setTimeout(function() {
+            x[slideIndex-1].style.opacity = "1";
+            
+            // After fade in completes, hide all other images
+            setTimeout(function() {
+                for (i = 0; i < x.length; i++) {
+                    if (i !== slideIndex-1) {
+                        x[i].style.display = "none";
+                        x[i].style.opacity = "1"; // Reset for next time
+                        x[i].style.zIndex = "1";
+                    }
+                }
+                x[slideIndex-1].style.zIndex = "1"; // Reset z-index
+            }, 500); // Wait for transition to complete
+        }, 10);
+    }
+
+    function nextSlide() {
+        slideIndex++;
+        if (slideIndex > document.getElementsByClassName("mySlides").length) {
+            slideIndex = 1;
+        }
+        showDivs(slideIndex);
+    }
+
+    function startAutoSlide() {
+        // Clear any existing timer
+        clearInterval(autoSlideTimer);
+        // Auto-advance every 4 seconds
+        autoSlideTimer = setInterval(nextSlide, 4000);
+    }
+
+    // Pause auto-rotation when hovering over the slider
+    document.querySelector('.w3-content').addEventListener('mouseenter', function() {
+        clearInterval(autoSlideTimer);
+    });
+
+    // Resume auto-rotation when mouse leaves the slider
+    document.querySelector('.w3-content').addEventListener('mouseleave', function() {
+        startAutoSlide();
+    });
+    </script>
 </body>
 </html>
